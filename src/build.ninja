@@ -1,0 +1,11 @@
+# build.ninja
+
+cxx = g++
+flags = -DMG_ENABLE_SSL -I/usr/local/opt/openssl/include  -L/usr/local/opt/openssl/lib -lssl -lcrypto
+
+rule compile
+  command = $cxx $in -o $out $flags
+
+build main : compile main.cpp mongoose.c
+
+default main

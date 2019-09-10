@@ -1,0 +1,167 @@
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Super Hero Stats</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="js/jquery-ui.css">
+
+    <link rel="stylesheet" href="css/superhero.css">
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" style="font-size: 25px; color:lightgrey" href="#"><div style="height: 60px; margin-top: -20px"><img style="height: 100%" src="./img/marvel.png" /></div></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" autocomplete="off" id="form_hero">
+            <div class="autocomplete">
+              <input id="input_hero" class="form-control" type="text" name="heros" placeholder="Search Heros">
+
+            </div>
+            <button id="getHero" type="submit" class="btn btn-success">Get</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="jumbotron">
+      <div class="container">
+      <br><br>
+      <img class="pull-left" style="height: 50px; margin-top:10%; margin-left: -10%;cursor:pointer;" src="./img/left_chevron.png" alt="Super Heroes" onclick="slider('left');"> 
+      <div style="height: 300px" class="col-md-3">
+			<img id="img" style="height: 100%;" src="./img/thumbnail.svg" class="img-thumbnail" alt="Super Heroes" >
+      </div>
+       
+      <div class="col-md-4">
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">BIO</h3>
+            </div>
+            <div class="panel-body">
+              <div class="col-md-12">  
+                <table class="table borderless">
+                  <tbody>
+                    <tr>
+                      <td>Name</td>
+                      <td id="name"></td>
+                    </tr>
+                    <tr>
+                      <td>Full Name</td>
+                      <td id="fullname"></td>
+                    </tr>
+                    <tr>
+                      <td>Aliases</td>
+                      <td id="aliases"></td>
+                    </tr>
+                    <tr>
+                      <td>Gender</td>
+                      <td id="gender"></td>
+                    </tr>
+                    <tr>
+                      <td>Alignment</td>
+                      <td id="alignment"></td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">PowerStats</h3>
+            </div>
+            <div class="panel-body">
+              <div class="col-md-12">  
+                <table class="table borderless">
+                  <tbody>
+                    <tr>
+                      <td>Intelligence</td>
+                      <td id="intel"></td>
+                    </tr>
+                    <tr>
+                      <td>Durability</td>
+                      <td id="dur"></td>
+                    </tr>
+                    <tr>
+                      <td>Strength</td>
+                      <td id="str"></td>
+                    </tr>
+                    <tr>
+                      <td>Speed</td>
+                      <td id="speed"></td>
+                    </tr>
+                    <tr>
+                      <td>Power</td>
+                      <td id="power"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          
+          </div>
+      </div>
+		<div onclick="slider('right');" style="cursor:pointer;"> 
+		<img class="pull-left" style="height: 50px; margin-top: -17%; margin-left: 97%" src="./img/right_chevron.png" alt="Super Heroes">
+      </div> 
+    </div>
+  </div>
+  `<div style="text-align:center;display:none;" id="loading" >Loading....</div>
+    <div class="container">
+
+      <div class="row">
+        <div>
+          <h3>Connections :</h3>
+            <div style="padding-left: 20px">  
+              <span class="bold">Affiliation : </span>
+              <span id="group"></span>  
+            </div ><br>
+            <div style="padding-left: 20px"> 
+              <span class="bold">Relations : </span>
+              <span id="family"></span>
+          </div>
+        </div>
+      </div>
+      <hr>
+
+      <footer class="pull-right">
+        <p>&copy; Marvels Company, Inc.</p>
+      </footer>
+    </div>
+
+<script src="js/jquery.min.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/jquery-ui.js"></script>
+
+<script src="js/superhero.js"></script>
+
+</body>
+</html>
